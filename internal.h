@@ -43,24 +43,22 @@ struct xbee_interface;
 
 #include "mutex.h"
 
-#define XBEE_INTERNAL_MAXIMUM_FRAME_LEN 255
-
 struct xbee_buf {
 	size_t len;
-	unsigned char data[XBEE_INTERNAL_MAXIMUM_FRAME_LEN];
+	unsigned char data[1];
 };
 
 struct xbee_sbuf {
 	xsys_sem sem;
 	size_t len;
 	int waitForAck;
-	unsigned char data[XBEE_INTERNAL_MAXIMUM_FRAME_LEN];
+	unsigned char data[1];
 };
 
 struct xbee_tbuf {
 	struct timespec ts;
 	size_t len;
-	unsigned char data[XBEE_INTERNAL_MAXIMUM_FRAME_LEN];
+	unsigned char data[1];
 };
 
 struct xbee_serialInfo {
