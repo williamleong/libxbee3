@@ -7,9 +7,7 @@ set(LIBREV 12)
 set(LIBFULLREV ${LIBMAJ}.${LIBMIN}.${LIBREV})
 set(MODELIST  xbee1 xbee2 xbee3 xbee5 xbee6b xbeeZB net debug)
 set(CMAKE_C_FLAGS "-fvisibility=hidden -Wno-variadic-macros -Wstrict-prototypes -MMD")
-set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_FLAGS "-fvisibility=hidden -Wno-variadic-macros -MMD")
-set(CMAKE_CXX_COMPILER "g++")
 file(GLOB xbee_srcs *.c modes/*.c modes/*/*.c)
 list(REMOVE_ITEM xbee_srcs 
 	${CMAKE_SOURCE_DIR}/xsys_darwin.c
