@@ -9,9 +9,9 @@ set(MODELIST  xbee1 xbee2 xbee3 xbee5 xbee6b xbeeZB net debug)
 set(CMAKE_C_FLAGS "-fvisibility=hidden -Wno-variadic-macros -Wstrict-prototypes -MMD")
 set(CMAKE_CXX_FLAGS "-fvisibility=hidden -Wno-variadic-macros -MMD")
 file(GLOB xbee_srcs *.c modes/*.c modes/*/*.c)
-list(REMOVE_ITEM xbee_srcs 
-	${CMAKE_SOURCE_DIR}/xsys_darwin.c
-	${CMAKE_SOURCE_DIR}/xsys_linux.c)
+list(REMOVE_ITEM xbee_srcs
+	${CMAKE_CURRENT_SOURCE_DIR}/xsys_darwin.c
+	${CMAKE_CURRENT_SOURCE_DIR}/xsys_linux.c)
 list(REVERSE MODELIST)
 set(CMODELIST NULL)
 foreach(MODE IN LISTS MODELIST)
